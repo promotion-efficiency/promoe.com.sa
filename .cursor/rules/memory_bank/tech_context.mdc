@@ -1,0 +1,60 @@
+---
+description: Technical environment and constraints for the Promotion Efficiency website.
+---
+
+# Tech Context – Promotion Efficiency Website
+
+## 1. Stack & Environment
+
+- **Frontend**:
+  - Static HTML pages (e.g., `index.html`, `about.html`, `services.html`, `projects.html`, `blog.html`, `contact.html`, detail pages, template pages).
+  - CSS from Webflow export:
+    - `css/normalize.css`
+    - `css/webflow.css`
+    - `css/promotion-efficiency.webflow.css`
+  - JavaScript:
+    - `js/webflow.js` (Webflow interactions, sliders, nav, animations).
+- **Fonts**:
+  - Loaded via Google Fonts (e.g., DM Sans, Geist, Inter, Manrope).
+- **Runtime**:
+  - No backend or server-side rendering.
+  - Runs on any static hosting (served over HTTP/HTTPS).
+
+## 2. Project Structure (Exported)
+
+- Root:
+  - Main pages: `index.html`, `about.html`, `services.html`, `projects.html`, `blog.html`, `contact.html`.
+  - Template pages: `template-pages/styleguide.html`, `template-pages/changelog.html`, `template-pages/licenses.html`.
+  - Detail pages: `detail_post.html`, `detail_project.html`, `detail_team.html`, `detail_tags.html`, `detail_project-category.html`.
+- Assets:
+  - `images/` – logos, placeholders, template imagery (should be gradually replaced with Promotion Efficiency assets).
+  - `css/` – stylesheets.
+  - `js/` – Webflow JS bundle.
+
+## 3. Development Workflow (Local)
+
+- Local preview can be done via any static file server, e.g.:
+  - `npx serve -l 4000` (or similar static server) from the project root.
+  - Or `python -m http.server` from the project root.
+- No build step is required beyond the export itself; edits are directly to the HTML/CSS/JS files.
+
+## 4. Technical Constraints & Considerations
+
+- **Static only**:
+  - Forms and interactions are limited to what Webflow’s exported JS supports (e.g., basic forms, sliders).
+  - Any dynamic behavior beyond that would require custom JS or external services.
+- **RTL/LTR**:
+  - Need to verify that the current CSS handles RTL correctly or extend it:
+    - Possible approaches: language-specific `html[lang="ar"]` styles, `dir="rtl"` on Arabic pages, or dedicated Arabic duplicates of pages.
+- **Performance**:
+  - Keep images optimized (use existing responsive `srcset` where possible).
+  - Avoid adding heavy libraries beyond the current Webflow bundle.
+
+## 5. Dependencies & External Services
+
+- **Webflow**:
+  - Original source of layout and interactions.
+  - Future structural changes may be easier to make in Webflow and then re-export.
+- **CDN / Hosting**:
+  - Not yet specified in this context; assume generic static hosting (e.g., Netlify, Vercel static, S3 + CloudFront, etc.).
+

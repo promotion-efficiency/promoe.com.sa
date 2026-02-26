@@ -1,0 +1,58 @@
+---
+alwaysApply: true
+---
+# Active Context – Promotion Efficiency Website
+
+_Last updated: 2026-02-25_
+
+## 1. Current State (High Level)
+
+- Webflow template (`Bauform`) has been exported and is running locally as a static site.
+- All main pages exist but still primarily contain **template copy, imagery, and demo content** (architecture-focused).
+- A high-level project description rule and memory bank structure have been created for Cursor.
+- **Bilingual requirement (Arabic + English)** is known but not yet implemented in the actual HTML/CSS.
+
+## 2. What Has Been Done So Far
+
+- Verified project structure: main pages, template pages, and detail pages discovered.
+- Set up a simple static server locally to preview the site.
+- Created:
+  - `project_brief.mdc`
+  - `product_context.mdc`
+  - `tech_context.mdc`
+  - `system_patterns.mdc`
+  - `progress.mdc` (initial skeleton)
+- Clarified core goals: marketing site for Promotion Efficiency with bilingual support.
+
+## 3. Immediate Next Steps (High Priority)
+
+- Replace high-visibility template branding and lorem ipsum on key pages:
+  - Home (`index.html`): hero copy, projects intro, testimonial content, newsletter text, footer contact info.
+  - About: heading, “About us” text, metrics, team descriptions.
+  - Services: service names and descriptions.
+  - Contact: headings, office info, and contact explanations.
+- Decide and document the **Arabic/English strategy**:
+  - Separate pages per language, or
+  - Single-page templates with language toggles and `dir`/`lang` attributes.
+
+These edits should be reflected back into `system_patterns.mdc` and `progress.mdc` as they become concrete.
+
+## 4. Open Questions / Assumptions
+
+- Exact Promotion Efficiency branding details:
+  - Official logo file(s).
+  - Brand colors and typography preferences vs current template defaults.
+- Tone of voice for content in both Arabic and English (formal vs casual, marketing vs technical).
+- Final decision on hosting platform and deployment pipeline.
+
+Until clarified, assume:
+
+- Use existing layout and typography as a baseline.
+- Write clear, professional marketing copy.
+
+## 5. Short-Term Focus for Future Work
+
+- Prioritize content replacement and structure alignment with Promotion Efficiency’s real business.
+- After core English content is stable, plan Arabic counterparts and RTL adjustments.
+- Keep the codebase consistent and simple (no unnecessary structural rewrites unless required).
+

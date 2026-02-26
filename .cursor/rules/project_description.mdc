@@ -1,0 +1,25 @@
+---
+description: High-level overview of the Promotion Efficiency marketing website.
+alwaysApply: true
+---
+
+# Promotion Efficiency Website
+
+- **Purpose**: Multi-page marketing site for Promotion Efficiency Company to present who they are, what they do, and why clients should trust them.
+- **Technology & structure**:
+  - Static, responsive website exported from Webflow (HTML, CSS, JS only, no backend).
+  - Based on the `Bauform` architecture portfolio template and customized to Promotion Efficiency branding.
+- **Main pages**:
+  - `Home` (`index.html`): Hero, highlighted projects, testimonials, news, gallery, and newsletter signup.
+  - `About`: Story of the studio/company, team, and credibility metrics ("By the numbers").
+  - `Services`: List of core services and what Promotion Efficiency offers.
+  - `Projects`: Portfolio / case studies of previous work.
+  - `Blog`: Articles and updates (news, thought leadership).
+  - `Contact`: Offices, contact form, and key contact info.
+- **Content goals**:
+  - Replace all template/architecture placeholders and lorem ipsum with Promotion Efficiency specific content.
+  - Highlight biggest clients, notable projects, and measurable impact.
+  - Maintain a clean, minimal, premium visual style consistent with the existing design.
+- **Languages**:
+  - Must support both **Arabic** and **English** content.
+  - Layouts and components should be ready for RTL (Arabic) and LTR (English) variants, even if some pages currently still use placeholder English copy.

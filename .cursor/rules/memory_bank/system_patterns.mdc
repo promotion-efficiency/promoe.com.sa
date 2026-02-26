@@ -1,0 +1,88 @@
+---
+description: Architectural patterns and structure for the Promotion Efficiency website.
+---
+
+# System Patterns – Promotion Efficiency Website
+
+## 1. High-Level Architecture
+
+- **Type**: Static, single-site architecture (no microservices, no backend).
+- **Composition**:
+  - Multiple HTML entry points (one per page).
+  - Shared CSS (global + page-specific rules) in `/css`.
+  - Shared JS bundle via `js/webflow.js` for:
+    - Navigation menu behavior (mobile nav, toggle).
+    - Sliders, galleries, and testimonials carousels.
+    - Scroll and hover animations.
+- **Hosting model**:
+  - Any static hosting that can serve HTML, CSS, JS, and assets from `/images`.
+
+## 2. Page & Navigation Pattern
+
+- **Global navigation**:
+  - Top navbar present on all main pages linking to:
+    - Home, About, Services, Projects, Blog, Contact.
+    - Template helper pages (Style Guide, Changelog, Licenses).
+- **Footer pattern**:
+  - Repeated footer block:
+    - Logo.
+    - Repeated navigation links.
+    - Contact info (email, phone).
+    - Credits (473.Agency, Webflow).
+
+```mermaid
+flowchart TD
+    Navbar["Global Navbar"] --> Home["Home"]
+    Navbar --> About["About"]
+    Navbar --> Services["Services"]
+    Navbar --> Projects["Projects"]
+    Navbar --> Blog["Blog"]
+    Navbar --> Contact["Contact"]
+
+    Home -->|"Highlighted projects"| Projects
+    Home -->|"News / Other news"| Blog
+    Home -->|"CTA"| Contact
+
+    Projects -->|"Project details"| detail_project
+    Blog -->|"Post details"| detail_post
+```
+
+## 3. Content Blocks & Reusable Patterns
+
+- **Hero sections**:
+  - Large heading, subheading/tagline, and sometimes CTA button.
+- **Lists / Collections**:
+  - Projects grids.
+  - News/Blog summaries.
+  - Team members and testimonials.
+- **Form blocks**:
+  - Newsletter subscription form(s).
+  - Contact forms.
+- **Metric sections**:
+  - “By the numbers” stats (awards, projects, years, employees).
+
+These blocks are duplicated across multiple pages and should be updated consistently (text, design tweaks, multilingual content).
+
+## 4. Multilingual / RTL Pattern (Planned)
+
+- Current export is primarily English, LTR, with no explicit Arabic content in code yet.
+- Planned patterns:
+  - Either:
+    - Separate page variants per language (e.g., `/index-ar.html`, `/about-ar.html`), or
+    - Language toggle that switches `lang` attribute and direction (`dir="rtl"` vs `dir="ltr"`).
+  - CSS strategy:
+    - Use `[dir="rtl"]` or `[lang="ar"]` selectors to override alignment and layout where needed.
+    - Avoid duplicating entire CSS if possible; prefer small RTL overrides.
+
+## 5. Known Template Elements To Replace
+
+- Branding text like:
+  - “Bauform” (template name).
+  - “473.agency” (template author).
+  - Template-specific placeholder content and lorem ipsum.
+- Placeholder images:
+  - Architecture / interior images meant for demo purposes.
+  - Logos that do not belong to Promotion Efficiency or its real clients.
+
+All of the above should gradually be replaced with Promotion Efficiency specific content and assets.
+

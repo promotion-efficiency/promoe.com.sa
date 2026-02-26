@@ -1,0 +1,55 @@
+---
+description: Task-level progress tracking for the Promotion Efficiency website.
+---
+
+# Progress – Promotion Efficiency Website
+
+Legend:
+
+- `[ ]` = Backlog
+- `[>]` = To Do (planned next)
+- `[~]` = In Progress
+- `[@]` = In Review
+- `[x]` = Done
+- `[-]` = Canceled
+
+## 1. Setup & Foundation
+
+- [x] Export initial Webflow project and add to repository/folder.
+- [x] Run the static site locally for preview.
+- [x] Create high-level project description rule in `.cursor/rules/project_description.mdc`.
+- [x] Create initial Memory Bank files (`project_brief.mdc`, `product_context.mdc`, `tech_context.mdc`, `system_patterns.mdc`, `active_context.mdc`, `progress.mdc`).
+
+## 2. Content Replacement – English
+
+- [x] Replace key hero and tagline copy on `index.html` with Promotion Efficiency specific messaging.
+- [x] Update Home page sections:
+  - [x] Projects intro text.
+  - [x] Testimonial content (names, quotes, companies) — now generic Promotion Efficiency themed placeholders.
+  - [-] Newsletter call-to-action text (newsletter section removed from all pages).
+- [x] Replace About page lorem ipsum with real company story and positioning.
+- [x] Replace Services page lorem ipsum with clear service descriptions and benefits.
+- [x] Update Projects page to reflect real Promotion Efficiency case studies (titles, summaries, categories).
+- [x] Update Blog page structure and example posts to match target topics.
+- [x] Update Contact page copy and office info to real Promotion Efficiency locations and details.
+
+## 3. Bilingual / Arabic Support
+
+- [>] Decide Arabic/English strategy:
+  - [ ] Separate pages vs language toggle.
+  - [ ] How URLs and navigation will reflect language choice.
+- [ ] Implement basic Arabic versions of the most important pages (Home, About, Services, Contact).
+- [ ] Add language-aware CSS (`dir="rtl"` or `[lang="ar"]` rules) to keep layouts clean in Arabic.
+
+## 4. Branding & Visuals
+
+- [x] Replace template logos with Promotion Efficiency logos (navbar + footer).
+- [~] Replace template placeholder imagery with relevant project and brand images.
+- [ ] Ensure colors and typography are aligned with Promotion Efficiency brand guidelines (once defined).
+
+## 5. Technical & Deployment
+
+- [ ] Choose and document hosting platform (e.g., Netlify, Vercel static, S3/CloudFront, etc.).
+- [ ] Verify contact form behavior in the chosen hosting environment.
+- [ ] Add simple deployment instructions to a README or Memory Bank once decided.
+

@@ -1,0 +1,54 @@
+---
+alwaysApply: true
+---
+# Project Brief – Promotion Efficiency Website
+
+## 1. Project Overview
+
+- **Project name**: Promotion Efficiency Website  
+- **Owner**: Promotion Efficiency Company  
+- **Type**: Marketing / portfolio website  
+- **Platform**: Webflow export (static HTML, CSS, JS)  
+- **Languages**: Arabic (RTL) and English (LTR)
+
+## 2. Primary Objectives
+
+- **Brand presence**: Clearly communicate who Promotion Efficiency is and what they do.
+- **Service clarity**: Explain core offerings and areas of expertise.
+- **Social proof**: Showcase previous projects, biggest clients, testimonials, and measurable impact.
+- **Content hub**: Provide news, updates, and blog posts about the company and its domain.
+- **Lead generation**: Make it easy to contact the company and start engagements.
+
+## 3. Scope (Current Phase)
+
+- Use the existing Webflow-based template (`Bauform`) as the visual and structural base.
+- Customize all pages, sections, and assets to match Promotion Efficiency:
+  - Replace placeholder text and images with real content.
+  - Adjust navigation labels, headings, and CTAs to company language and tone.
+  - Ensure all key pages are wired: Home, About, Services, Projects, Blog, Contact, plus any necessary detail pages.
+- Prepare the layout and components for **bi-lingual** content (Arabic + English).
+
+## 4. Out of Scope (For Now)
+
+- Building a custom backend or CMS (current export is static).
+- Complex authenticated user areas (dashboards, logins, etc.).
+- Advanced integrations (payment gateways, custom APIs) unless explicitly added later.
+
+## 5. Constraints & Non‑Negotiables
+
+- The site must remain **fast, responsive, and lightweight**.
+- Visual identity should feel **clean, minimal, and premium**, aligned with the existing template quality.
+- All user-facing text must be replaceable with Promotion Efficiency specific copy (no leftover template branding like “Bauform” or “473.agency”).
+- The structure must support both **Arabic** (RTL) and **English** (LTR) without breaking layout.
+
+## 6. Success Criteria
+
+- All template copy and logos replaced with Promotion Efficiency branding.
+- Clear navigation across the main pages and their detail pages.
+- Content accurately reflects:
+  - Who Promotion Efficiency is.
+  - Their services and differentiators.
+  - Key past projects and major clients.
+  - News, blog or updates that feel on-brand.
+- Site is ready to be hosted as a static website (e.g., on a CDN or static hosting provider).
+

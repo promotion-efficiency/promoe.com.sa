@@ -1,0 +1,83 @@
+---
+alwaysApply: true
+---
+# Product Context – Promotion Efficiency Website
+
+## 1. Why This Website Exists
+
+- **Business problem**: Promotion Efficiency needs a professional, bilingual online presence that explains who they are, what they offer, and why clients should trust them.
+- **Goals**:
+  - Improve credibility with potential clients and partners.
+  - Showcase previous projects and recognizable client names.
+  - Explain services in a way that is easy to skim yet detailed enough for decision-makers.
+  - Provide a central place for updates, news, and thought leadership.
+
+## 2. Target Audience
+
+- **Primary audience**:
+  - Decision-makers at potential client organizations (directors, managers, founders).
+  - Existing clients wanting to see more of Promotion Efficiency’s work.
+- **Secondary audience**:
+  - Partners, suppliers, and media.
+  - Potential hires who want to understand the company.
+
+## 3. Key User Needs
+
+- **Understand the company quickly**:
+  - Who is Promotion Efficiency?
+  - What is their core value proposition?
+  - In which industries or domains do they operate?
+- **See proof of expertise**:
+  - Detailed project case studies.
+  - Names/logos of major clients.
+  - Testimonials and “by the numbers” credibility metrics.
+- **Know what services are offered**:
+  - Clear list of services and packages, with benefits and possible outcomes.
+- **Know how to get in touch**:
+  - Simple contact options (form, email, phone).
+  - Clear expectations after reaching out.
+
+## 4. Core Flows & Experience
+
+- **Browse → Trust → Contact**:
+  1. Land on Home (hero + quick positioning + featured projects).
+  2. Explore Services / Projects / About for deeper validation.
+  3. Read Blog / News for freshness and expertise.
+  4. Go to Contact page to start a conversation.
+
+- **Content discovery**:
+  - From Home to Projects and Blog via prominent CTAs.
+  - Internal links between case studies, related blog posts, and services.
+
+## 5. Bilingual Experience (Arabic + English)
+
+- The product must:
+  - Provide all critical marketing information in **both Arabic and English**.
+  - Respect reading direction:
+    - Arabic: RTL layouts, right-aligned typography where appropriate.
+    - English: LTR layouts, left-aligned typography.
+  - Keep the visual identity consistent across both languages (colors, imagery, structure).
+
+## 6. High-Level Sitemap (Current Template)
+
+```mermaid
+flowchart TD
+    Home["Home (index.html)"]
+    About["About"]
+    Services["Services"]
+    Projects["Projects"]
+    Blog["Blog"]
+    Contact["Contact"]
+
+    Home --> About
+    Home --> Services
+    Home --> Projects
+    Home --> Blog
+    Home --> Contact
+
+    Projects -->|"Project detail pages"| Projects
+    Blog -->|"Post detail pages"| Blog
+```
+
+This sitemap is based on the current Webflow export and can be extended as custom Arabic/English variants or additional pages are introduced.
+
