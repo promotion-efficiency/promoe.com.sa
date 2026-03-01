@@ -1,7 +1,6 @@
 ---
-description: Architectural patterns and structure for the Promotion Efficiency website.
+alwaysApply: true
 ---
-
 # System Patterns – Promotion Efficiency Website
 
 ## 1. High-Level Architecture

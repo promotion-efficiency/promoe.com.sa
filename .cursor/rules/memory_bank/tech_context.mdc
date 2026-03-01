@@ -1,7 +1,6 @@
 ---
-description: Technical environment and constraints for the Promotion Efficiency website.
+alwaysApply: true
 ---
-
 # Tech Context – Promotion Efficiency Website
 
 ## 1. Stack & Environment
