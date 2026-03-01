@@ -1240,6 +1240,11 @@ figcaption {
   overflow: visible;
 }
 
+/* Privacy policy: wider content column */
+.section-privacy-content .privacy-policy-content {
+  max-width: 65rem;
+}
+
 .flex-block {
   justify-content: space-between;
 }
