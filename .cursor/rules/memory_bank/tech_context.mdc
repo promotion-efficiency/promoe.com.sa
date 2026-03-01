@@ -6,7 +6,7 @@ alwaysApply: true
 ## 1. Stack & Environment
 
 - **Frontend**:
-  - Static HTML pages (e.g., `index.html`, `about.html`, `services.html`, `projects.html`, `blog.html`, `contact.html`, detail pages, template pages).
+  - Static HTML pages (e.g., `index.html`, `about.html`, `projects.html`, `blog.html`, `contact.html`, detail pages, template pages). (Note: Services page was removed; no `services.html`.)
   - CSS from Webflow export:
     - `css/normalize.css`
     - `css/webflow.css`
@@ -22,7 +22,7 @@ alwaysApply: true
 ## 2. Project Structure (Exported)
 
 - Root:
-  - Main pages: `index.html`, `about.html`, `services.html`, `projects.html`, `blog.html`, `contact.html`.
+  - Main pages: `index.html`, `about.html`, `projects.html`, `blog.html`, `contact.html`.
   - Template pages: `template-pages/styleguide.html`, `template-pages/changelog.html`, `template-pages/licenses.html`.
   - Detail pages: `detail_post.html`, `detail_project.html`, `detail_team.html`, `detail_tags.html`, `detail_project-category.html`.
 - Assets:
