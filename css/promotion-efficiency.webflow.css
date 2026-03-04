@@ -3998,7 +3998,8 @@ figcaption {
 .footer .footer-legal-link,
 .footer .footer-credit-text,
 .footer .footer-link-list,
-.footer .text-size-regular {
+.footer .text-size-regular,
+.footer .footer-bottom-social-link {
   color: var(--off-white) !important;
 }
 .footer .footer-link:hover,
@@ -4007,6 +4008,38 @@ figcaption {
 }
 .footer .logo-footer {
   filter: brightness(0) invert(1);
+}
+.footer .footer-bottom-social {
+  display: flex !important;
+  gap: 1rem;
+  align-items: center;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.footer .footer-bottom-social-link {
+  color: #fffcf5 !important;
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: color .2s;
+}
+.footer .footer-bottom-social-link svg {
+  width: 20px !important;
+  height: 20px !important;
+  display: block !important;
+  stroke: currentColor !important;
+  fill: none !important;
+}
+.footer .footer-bottom-social-link path {
+  stroke: currentColor !important;
+  fill: none !important;
+}
+.footer .footer-bottom-social-link:hover {
+  color: #1E5B64 !important;
+}
+.footer .footer-bottom-social-link:hover svg,
+.footer .footer-bottom-social-link:hover path {
+  stroke: #1E5B64 !important;
 }
 
 /* Hidden sections: What is PE, Newsletter, Testimonial (exclude project detail hero) */

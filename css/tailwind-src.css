@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Footer social: use Tailwind utilities only (no preflight) */
+@layer components {
+  .footer-social-icon {
+    @apply w-5 h-5 shrink-0;
+  }
+}
