@@ -1234,12 +1234,6 @@ figcaption {
   overflow: visible;
 }
 
-.paragraph-medium-wrapper {
-  width: 100%;
-  max-width: 35rem;
-  overflow: visible;
-}
-
 /* Privacy policy: wider content column */
 .section-privacy-content .privacy-policy-content {
   max-width: 65rem;
