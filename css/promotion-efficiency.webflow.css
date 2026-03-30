@@ -4496,3 +4496,179 @@ header.section-background-image.main:not(.project-detail-hero) + section.section
   visibility: visible;
 }
 
+
+/* =====================================================
+   UX IMPROVEMENTS
+   ===================================================== */
+
+/* --- 1. Desktop navigation: hamburger menu (original Webflow behavior) --- */
+/* nav links remain hidden at all breakpoints; hamburger always visible */
+/* Make menu scrollable when all items don't fit (e.g. short viewports) */
+.navbar-menu-main.w-nav-menu {
+  overflow-y: auto;
+}
+
+/* --- 2. Keyboard focus indicators (WCAG 2.1 AA) --- */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+.w-nav-link:focus-visible,
+.main-button-black:focus-visible,
+.main-button-white:focus-visible,
+.navbar-1-menu-button:focus-visible,
+#lang-switcher:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --- 3. Interior page heroes: reduce excessive top padding --- */
+.section-header-main .header-layout-3 {
+  padding-top: 4rem;
+}
+
+/* --- 3. Projects filter bar --- */
+.projects-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+.project-filter-btn {
+  background: none;
+  border: 1.5px solid var(--off-black, #1a1a1a);
+  color: var(--off-black, #1a1a1a);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding: 0 1.25rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.project-filter-btn:hover {
+  background-color: var(--off-black, #1a1a1a);
+  color: var(--off-white, #fafaf5);
+}
+.project-filter-btn.active {
+  background-color: var(--off-black, #1a1a1a);
+  color: var(--off-white, #fafaf5);
+}
+.grid-1-layout.hidden-project {
+  display: none;
+}
+[dir="rtl"] .projects-filter-bar {
+  justify-content: flex-end;
+}
+
+/* --- 4. Footer social icons: minimum 44x44px touch targets --- */
+.footer .footer-bottom-social-link {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* =====================================================
+   ARABIC / RTL SUPPORT
+   ===================================================== */
+
+/* Language switcher — inherits .navbar-link-main styles, no extra CSS needed */
+
+/* Arabic font for RTL pages */
+html[lang="ar"] body,
+[dir="rtl"] body {
+  font-family: 'Tajawal', var(--font-family--main), sans-serif;
+  direction: rtl;
+}
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3,
+html[lang="ar"] h4, html[lang="ar"] h5, html[lang="ar"] h6,
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3,
+[dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6,
+html[lang="ar"] p, html[lang="ar"] a, html[lang="ar"] div,
+[dir="rtl"] p, [dir="rtl"] a, [dir="rtl"] div {
+  font-family: 'Tajawal', var(--font-family--main), sans-serif;
+  letter-spacing: 0 !important;
+}
+
+/* RTL layout flips
+ * Note: direction:rtl on body already reverses flex-direction:row naturally.
+ * We do NOT add row-reverse — that would double-reverse back to LTR.
+ * The only exceptions are elements whose base CSS explicitly uses row-reverse,
+ * which we must cancel back to row so they flow RTL. */
+
+/* The desktop navbar links-wrapper base CSS already forces flex-direction:row !important.
+ * In RTL, direction:rtl + row = right-to-left, which is correct. No override needed. */
+
+/* RTL heading class overrides (Webflow sets explicit text-align:left on these) */
+[dir="rtl"] .heading-style-h1,
+[dir="rtl"] .heading-style-h2,
+[dir="rtl"] .heading-style-h3,
+[dir="rtl"] .heading-style-h4,
+[dir="rtl"] .heading-style-h5,
+[dir="rtl"] .heading-style-h6,
+[dir="rtl"] .text-size-regular,
+[dir="rtl"] .text-size-medium,
+[dir="rtl"] .text-size-large,
+[dir="rtl"] .news-card-title,
+[dir="rtl"] .news-card-description,
+[dir="rtl"] .news-card-date,
+[dir="rtl"] .clients-heading,
+[dir="rtl"] .clients-heading-sub {
+  text-align: right;
+}
+
+/* RTL text alignment */
+[dir="rtl"] .content,
+[dir="rtl"] .heading-wrapper,
+[dir="rtl"] .subheading-wrapper,
+[dir="rtl"] .paragraph-medium-wrapper,
+[dir="rtl"] .tagline-line-wrapper,
+[dir="rtl"] .text-block-wrapper,
+[dir="rtl"] .h1-h5-wrapper,
+[dir="rtl"] .h2-h3-wrapper,
+[dir="rtl"] .h2-wrapper,
+[dir="rtl"] .header-layout-1,
+[dir="rtl"] .header-layout-2,
+[dir="rtl"] .footer-link-list,
+[dir="rtl"] .footer-credit-text,
+[dir="rtl"] .content-grid-wrapper,
+[dir="rtl"] .paragraph-layout,
+[dir="rtl"] .paragraph-small-horizontal-wrapper,
+[dir="rtl"] .news-card,
+[dir="rtl"] .tagline-side-wrapper,
+[dir="rtl"] .clients-heading,
+[dir="rtl"] .section-clients .heading-style-h2,
+[dir="rtl"] .section-clients .clients-heading-sub,
+[dir="rtl"] .testimonial-company-wrapper,
+[dir="rtl"] .testimonial-quote-wrapper,
+[dir="rtl"] .testimonial-author-wrapper,
+[dir="rtl"] .testimonial-author-text,
+[dir="rtl"] .heading-h5-wrapper,
+[dir="rtl"] .footer-left-wrapper {
+  text-align: right;
+}
+
+/* RTL grid & list direction */
+[dir="rtl"] .grid-1-layout,
+[dir="rtl"] .collection-list-projects,
+[dir="rtl"] .news-cards-grid,
+[dir="rtl"] .paragraph-layout {
+  direction: rtl;
+}
+
+/* RTL: flip section-projects grid columns */
+[dir="rtl"] .w-layout-grid.grid-1-layout {
+  direction: rtl;
+}
